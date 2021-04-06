@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercício 3</title>
+    </head>
+    <body>
+        <script>
+            /*
+            Crie um sistema onde o usuário informe seu nome, peso, altura, idade, sexo e o sistema
+            calcule o IMC do mesmo e mostre o resultado escrito na tela.
+            Fórmula: IMC = Peso ÷ (Altura × Altura)
+
+            */
+            alert("Olá, vamos comerçar!");
+            var nome = prompt("Primeiro me diga seu nome: ");
+            var peso = prompt("Agora me informe seu peso: ");
+            var altura = prompt(
+                "Digite sua altura, sem vírgula ou ponto, ok? "
+            );
+            var idade = prompt("Agora qual sua idade? ");
+            var sexo = prompt("1 para Masculino e 2 para Feminino");
+
+            imc = peso / (altura * altura);
+            imc = imc * 10000;
+
+            document.write("<h2> FICHA </h2>");
+            document.write(`${nome} <br>`);
+            document.write(`Peso: ${peso}Kg <br>`);
+            document.write(`Altura: ${altura} <br>`);
+            document.write(`Idade: ${idade} anos <br>`);
+
+            if (sexo == 1) {
+                document.write(`Masculino<br>`);
+            } else if (sexo == 2) {
+                document.write(`Feminino<br>`);
+            }
+
+            if (imc < 18.5) {
+                document.write(
+                    `Seu resultado do IMC é ${imc.toFixed(
+                        2
+                    )} <br><h1 style="color: orange;" >Você está abaixo do Peso Ideal.</h1>`
+                );
+            } else if (imc > 18.5 && imc < 24.9) {
+                document.write(
+                    `Seu resultado do IMC é ${imc.toFixed(
+                        2
+                    )} <br><h1 style="color: green;">Você está com o Peso Normal.</h1>`
+                );
+            } else if (imc > 25 && imc < 29.9) {
+                document.write(
+                    `Seu resultado do IMC é ${imc.toFixed(
+                        2
+                    )} <br><h1 style="color: red;">Você está com Sobrepeso.</h1>`
+                );
+            } else if (imc > 30 && imc < 34.9) {
+                document.write(
+                    `Seu resultado do IMC é ${imc.toFixed(
+                        2
+                    )} <br><h1 style="color: red">Você está com Obesidade Grau I.</h1>`
+                );
+            } else if (imc > 35 && imc < 39.9) {
+                document.write(
+                    `Seu resultado do IMC é ${imc.toFixed(
+                        2
+                    )} <br><h1 style="color: red">Você está com Obesidade Grau II.</h1>`
+                );
+            } else if (imc >= 40) {
+                document.write(
+                    `Seu resultado do IMC é ${imc.toFixed(
+                        2
+                    )} <br><h1 style="color: red">Você está com Obesidade Grau III ou Mórbida.</h1>`
+                );
+            }
+        </script>
+    </body>
+</html>

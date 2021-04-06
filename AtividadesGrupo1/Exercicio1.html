@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exercício 1</title>
+    </head>
+    <body>
+        <script>
+            /*
+            Crie um sistema  de tabuada dinâmica onde o usuário possa informar 2 números, o primeiro será o
+            multiplicador e o segundo até quanto ele quer multiplicar, Exemplo: 13 e 10, fazer a tabuada do
+            número 13 de 0 a 10. Como deve ser a apresentação na tela:
+            13 x 0 = 0
+            13 x 1 = 13
+            13 x 2 = 26
+            */
+            var numb1 = parseInt(prompt("Digite o primeiro número: "));
+            var numb2 = parseInt(prompt("Digite o segundo número: "));
+
+            var contador = 0;
+            while (contador <= numb2) {
+                document.write(
+                    numb1,
+                    " x ",
+                    contador,
+                    " = ",
+                    numb1 * contador,
+                    "<br>"
+                );
+                contador++;
+            }
+        </script>
+    </body>
+</html>
